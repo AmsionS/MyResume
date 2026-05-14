@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Amsion Siziba</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-container {
+            width: 800px;
+            background-color: white;
+            display: flex;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Left Sidebar Styling */
+        .sidebar {
+            width: 35%;
+            background-color: #003d73;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .name-header {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .contact-section {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .contact-header {
+            background-color: #00264d;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .contact-item span {
+            margin-right: 10px;
+        }
+
+        /* Right Content Styling */
+        .main-content {
+            width: 65%;
+            padding: 40px;
+            color: #333;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #666;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        .edu-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .edu-subtext {
+            font-size: 14px;
+            color: #555;
+            margin-top: 4px;
+        }
+
+        .edu-year {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="name-header">Amsion Siziba</div>
+            
+            <img src="cv picture.JPEG" alt="Profile Picture" class="profile-img">
+
+            <div class="contact-section">
+                <div class="contact-header">Contact</div>
+                
+                <div class="contact-item">
+                    <span>@</span> amsionnkateko@gmail.com
+                </div>
+                
+                <div class="contact-item">
+                    <span>&#128241;</span> 0789543923/0789159599
+                </div>
+                
+                <div class="contact-item">
+                    <span>&#128205;</span> 11012 Emanzini street Ivory Park ext 11 Midrand 1632
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="section-title">Education</div>
+
+            <div class="edu-item">
+                <div class="edu-header">
+                    <span>Dynamic DNA</span>
+                    <span class="edu-year">2026</span>
+                </div>
+                <div class="edu-subtext">System Development Level 4</div>
+                <div class="edu-subtext">Currently</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-header">
+                    <span>Tshwane University of Technology</span>
+                    <span class="edu-year">2024</span>
+                </div>
+                <div class="edu-subtext">Diploma In Internal Auditing</div>
+            </div>
+
+            <div class="edu-item">
+                <div class="edu-header">
+                    <span>Magigwana Secondary School</span>
+                    <span class="edu-year">2021</span>
+                </div>
+                <div class="edu-subtext">Matric</div>
+                <div class="edu-subtext">12</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
