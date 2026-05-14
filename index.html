@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Slide Show CV</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      overflow: hidden;
+      background: #111827;
+      color: white;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.8s ease;
+      text-align: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: #60a5fa;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #93c5fd;
+    }
+
+    p, li {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 800px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #60a5fa;
+      margin-bottom: 25px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .skill {
+      background: #1e3a8a;
+      padding: 12px 20px;
+      border-radius: 30px;
+    }
+
+    .progress {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 6px;
+      background: #60a5fa;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="slideshow">
+
+    <div class="progress" id="progress"></div>
+
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="https://via.placeholder.com/180" class="profile-img" alt="Profile Photo">
+      <h1>Amsion Siziba</h1>
+      <p>Web Developer</p>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <h2>About Me</h2>
+      <p>
+          I am a system developer who is passionate about technology and solving problems using computer systems. I enjoy creating software and applications that help people complete tasks more efficiently and effectively. As a system developer, I work with programming languages, databases, and different software tools to design and maintain systems that meet users’ needs..
+      </p>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+      <h2>Skills</h2>
+
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+      <h2>Education Curently</h2>
+      <p>System Developer</p>
+      <p>Dynamic DNA</p>
+      <p>2026</p>
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide">
+      <h2>Contact</h2>
+      <p>Email: amsionnkateko@@email.com</p>
+      <p>Phone: +27 789543923</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button onclick="prevSlide()">Previous</button>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const progress = document.getElementById('progress');
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+
+      slides[index].classList.add('active');
+
+      progress.style.width = ((index + 1) / slides.length) * 100 + '%';
+    }
+
+    function nextSlide() {
+      currentSlide++;
+
+      if (currentSlide >= slides.length) {
+        currentSlide = 0;
+      }
+
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide--;
+
+      if (currentSlide < 0) {
+        currentSlide = slides.length - 1;
+      }
+
+      showSlide(currentSlide);
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    showSlide(currentSlide);
+  </script>
+
+</body>
+</html>
