@@ -1,0 +1,98 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+        }
+
+        main {
+            width: 800px;
+            background-color: white;
+            display: flex;
+            min-height: 100vh;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Sidebar */
+        aside {
+            width: 35%;
+            background-color: #003d73;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        section {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        h2 {
+            background-color: #00264d;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        /* Main Content */
+        article {
+            width: 65%;
+            padding: 40px;
+            color: #333;
+        }
+
+        h3 {
+            font-size: 18px;
+            color: #666;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 25px;
+        }
+
+        strong {
+            display: flex;
+            justify-content: space-between;
+            font-size: 15px;
+        }
+
+        small {
+            color: #666;
+        }
+    
