@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Amsion Siziba</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,7 +15,7 @@
             justify-content: center;
         }
 
-        .resume-container {
+        main {
             width: 800px;
             background-color: white;
             display: flex;
@@ -22,8 +23,8 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        /* Left Sidebar Styling */
-        .sidebar {
+        /* Sidebar */
+        aside {
             width: 35%;
             background-color: #003d73;
             color: white;
@@ -33,7 +34,7 @@
             align-items: center;
         }
 
-        .profile-img {
+        img {
             width: 150px;
             height: 150px;
             object-fit: cover;
@@ -41,7 +42,7 @@
             margin-bottom: 30px;
         }
 
-        .name-header {
+        h1 {
             text-align: center;
             font-size: 22px;
             font-weight: bold;
@@ -49,41 +50,33 @@
             margin-bottom: 20px;
         }
 
-        .contact-section {
+        section {
             width: 100%;
             margin-top: 20px;
         }
 
-        .contact-header {
+        h2 {
             background-color: #00264d;
             padding: 10px;
-            font-weight: bold;
             font-size: 16px;
             margin-bottom: 15px;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 15px;
+        p {
             font-size: 14px;
             line-height: 1.4;
+            margin-bottom: 15px;
         }
 
-        .contact-item span {
-            margin-right: 10px;
-        }
-
-        /* Right Content Styling */
-        .main-content {
+        /* Main Content */
+        article {
             width: 65%;
             padding: 40px;
             color: #333;
         }
 
-        .section-title {
+        h3 {
             font-size: 18px;
-            font-weight: bold;
             color: #666;
             text-transform: uppercase;
             border-bottom: 2px solid #333;
@@ -91,87 +84,91 @@
             margin-bottom: 20px;
         }
 
-        .edu-item {
-            margin-bottom: 25px;
-            position: relative;
+        ul {
+            list-style: none;
+            padding: 0;
         }
 
-        .edu-header {
+        li {
+            margin-bottom: 25px;
+        }
+
+        strong {
             display: flex;
             justify-content: space-between;
-            font-weight: bold;
             font-size: 15px;
         }
 
-        .edu-subtext {
-            font-size: 14px;
-            color: #555;
-            margin-top: 4px;
-        }
-
-        .edu-year {
+        small {
             color: #666;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="resume-container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <div class="name-header">Amsion Siziba</div>
-            
-            <img src="cv picture.JPEG" alt="Profile Picture" class="profile-img">
+    <main>
 
-            <div class="contact-section">
-                <div class="contact-header">Contact</div>
-                
-                <div class="contact-item">
-                    <span>@</span> amsionnkateko@gmail.com
-                </div>
-                
-                <div class="contact-item">
-                    <span>&#128241;</span> 0789543923/0789159599
-                </div>
-                
-                <div class="contact-item">
-                    <span>&#128205;</span> 11012 Emanzini street Ivory Park ext 11 Midrand 1632
-                </div>
-            </div>
-        </div>
+        <!-- Sidebar -->
+        <aside>
+
+            <h1>Amsion Siziba</h1>
+
+            <img src="cv picture.JPEG" alt="Profile Picture">
+
+            <section>
+                <h2>Contact</h2>
+
+                <p>@ amsionnkateko@gmail.com</p>
+
+                <p>📱 0789543923 / 0789159599</p>
+
+                <p>📍 11012 Emanzini Street, Ivory Park Ext 11, Midrand 1632</p>
+            </section>
+
+        </aside>
 
         <!-- Main Content -->
-        <div class="main-content">
-            <div class="section-title">Education</div>
+        <article>
 
-            <div class="edu-item">
-                <div class="edu-header">
-                    <span>Dynamic DNA</span> 
-                    <span class="edu-year">2026</span>
-                </div>
-                <div class="edu-subtext">System Development Level 4</div>
-                <div class="edu-subtext">Currently</div>
-            </div>
+            <h3>Education</h3>
 
+            <ul>
 
-            <div class="edu-item">
-                <div class="edu-header">
-                    <span>Tshwane University of Technology</span>
-                    <span class="edu-year">2024</span>
-                </div>
-                <div class="edu-subtext">Diploma In Internal Auditing</div>
-            </div>
+                <li>
+                    <strong>
+                        <span>Dynamic DNA</span>
+                        <small>2026</small>
+                    </strong>
 
-            <div class="edu-item">
-                <div class="edu-header">
-                    <span>Magigwana Secondary School</span>
-                    <span class="edu-year">2021</span>
-                </div>
-                <div class="edu-subtext">Matric</div>
-                <div class="edu-subtext">12</div>
-            </div>
-        </div>
-    </div>
+                    <p>System Development Level 4</p>
+                    <p>Currently</p>
+                </li>
+
+                <li>
+                    <strong>
+                        <span>Tshwane University of Technology</span>
+                        <small>2024</small>
+                    </strong>
+
+                    <p>Diploma In Internal Auditing</p>
+                </li>
+
+                <li>
+                    <strong>
+                        <span>Magigwana Secondary School</span>
+                        <small>2021</small>
+                    </strong>
+
+                    <p>Matric</p>
+                    <p>12</p>
+                </li>
+
+            </ul>
+
+        </article>
+
+    </main>
 
 </body>
 </html>
